@@ -23,7 +23,7 @@ fn repl(mut input: impl BufRead, mut output: impl Write) {
         let lexer = Lexer::new(&line);
 
         for (i, token) in lexer.enumerate() {
-            writeln!(output, "{:2.}) {:?}", i, token).expect("Cannot write token");
+            writeln!(output, "{:2}) {:?}", i, token).expect("Cannot write token");
         }
     }
 }
